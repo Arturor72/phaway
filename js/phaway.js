@@ -1,10 +1,10 @@
 $(document).ready(main());
 var canvas = this.__canvas = new fabric.Canvas('c');
-
+loadAnillo("img/Anillado.png",canvas);
 function loadAnillo(pathAnillo, canvas){
 
     (function() {
-        canvas.clear();
+        //canvas.clear();
         fabric.Object.prototype.transparentCorners = false;
         
         var mImage=new fabric.Image.fromURL(pathAnillo, function(img) {
@@ -24,11 +24,10 @@ function loadAnillo(pathAnillo, canvas){
       })();
 }
 function createBackground(nameBackground, canvas){
-    var path="img/";
+    var path="img/fondos/";
     var extension=".jpg";
     (function() {
-        canvas.clear();
-        loadAnillo("img/Anillado.png",canvas);
+//        loadAnillo("img/Anillado.png",canvas);
         fabric.Object.prototype.transparentCorners = false;
         
         var mImage=new fabric.Image.fromURL(path+nameBackground+extension, function(img) {
@@ -41,13 +40,22 @@ function createBackground(nameBackground, canvas){
             lockMovementY: true,
             selectable:false,
           });
-          if(canvas.contains(img)){
-            console.log("Yala");
-          }else{
-            console.log("Nola");
-          };
-          canvas.add(img);
-          canvas.sendToBack(img);
+          var objs = canvas.getObjects();
+          var c=0;
+          if (objs.length) {
+              objs.forEach(function(e) {
+                  if (e && e.type === 'image' && containsx(e._element.src,"fondos*")) {
+                    c++;
+                    console.log(1);
+                    e._element.src = path+nameBackground+extension;
+                    canvas.renderAll();
+                  }
+              });
+          }
+          if(c==0 ){
+            canvas.add(img);
+            canvas.sendToBack(img);
+            }
         }) ;
 
       })();
@@ -62,10 +70,28 @@ function addImage(pathImage, canvas){
             top: 0,
             angle: 0
           });
-          canvas.add(img);
+          var objs = canvas.getObjects();
+          var c=0;
+          if (objs.length) {
+              objs.forEach(function(e) {
+                  if (e && e.type === 'image' && containsx(e._element.src,"avatar*")) {
+                    c++;
+                    e._element.src = pathImage;
+                    canvas.renderAll();
+                  }
+              });
+          }
+          if(c==0 ){
+            canvas.add(img);
+            }
         }) ;
 
       })();
+}
+
+function containsx(path, regexString){
+    var re = new RegExp (regexString);
+    return re.test(path);
 }
 
 function createText(texto, canvas){
@@ -111,16 +137,16 @@ function main() {
     });
     
     $("#Elefante").on("click",function(){
-        addImage("img/Elefante.png",canvas);
+        addImage("img/avatar/Elefante.png",canvas);
     });
     $("#Gato").on("click",function(){
-        addImage("img/Gato.png",canvas);
+        addImage("img/avatar/Gato.png",canvas);
     });
     $("#RatonaSola").on("click",function(){
-        addImage("img/RatonaSola.png",canvas);
+        addImage("img/avatar/RatonaSola.png",canvas);
     });
     $("#Unicornio").on("click",function(){
-        addImage("img/Unicornio.png",canvas);
+        addImage("img/avatar/Unicornio.png",canvas);
     });
     $("#addText").on("click",function(){
         var texto=$("#nameText").val();
