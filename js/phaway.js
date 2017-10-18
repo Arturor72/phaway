@@ -66,7 +66,7 @@ function addImage(pathImage, canvas){
         fabric.Object.prototype.transparentCorners = false;
         var mImage=new fabric.Image.fromURL(pathImage, function(img) {
           img.scale(0.3).set({
-            left: 0,
+            left: 30,
             top: 0,
             angle: 0
           });
@@ -95,10 +95,11 @@ function containsx(path, regexString){
 }
 
 function createText(texto, canvas){
+    console.log(canvas.getHeight()-40);
     (function() {
         console.log("addText "+texto);
-        var text = new fabric.Text(texto, { 
-            left: 50, top: 0, fontFamily: 'Indie Flower', fontSize: 40,
+        var text = new fabric.IText(texto, { 
+            left: canvas.getWidth()/2, top: canvas.getHeight()-40, fontFamily: 'Indie Flower', fontSize: 40,
         });
         canvas.add(text);
     })();
@@ -106,47 +107,51 @@ function createText(texto, canvas){
 //sendBackwards
 function main() {
 
-    $('.carousel[data-type="multi"] .item').each(function () {
+    $('.multi-item-carousel').carousel({
+        interval: false
+      });
+      
+      // for every slide in carousel, copy the next slide's item in the slide.
+      // Do the same for the next, next item.
+      $('.multi-item-carousel .item').each(function(){
         var next = $(this).next();
         if (!next.length) {
-            next = $(this).siblings(':first');
+          next = $(this).siblings(':first');
         }
         next.children(':first-child').clone().appendTo($(this));
-
-        for (var i = 0; i < 2; i++) {
-            next = next.next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-
-            next.children(':first-child').clone().appendTo($(this));
+        
+        if (next.next().length>0) {
+          next.next().children(':first-child').clone().appendTo($(this));
+        } else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
-    });
+      });
     
-    $("#Fondo").on("click",function(){
+    $(".Fondo").on("click",function(){
         createBackground("Fondo",canvas);
     });
-    $("#FondoGato").on("click",function(){
+    $(".FondoGato").on("click",function(){
         createBackground("FondoGato",canvas);
     });
-    $("#FondoBailarina").on("click",function(){
+    $(".FondoBailarina").on("click",function(){
         createBackground("FondoBailarina",canvas);
     });
-    $("#FondoUnicornio").on("click",function(){
+    $(".FondoUnicornio").on("click",function(){
         createBackground("FondoUnicornio",canvas);
     });
     
-    $("#Elefante").on("click",function(){
+    $(".Elefante").on("click",function(){
         addImage("img/avatar/Elefante.png",canvas);
     });
-    $("#Gato").on("click",function(){
+    $(".Gato").on("click",function(){
         addImage("img/avatar/Gato.png",canvas);
     });
-    $("#RatonaSola").on("click",function(){
+    $(".RatonaSola").on("click",function(){
         addImage("img/avatar/RatonaSola.png",canvas);
     });
-    $("#Unicornio").on("click",function(){
+    $(".Unicornio").on("click",function(){
         addImage("img/avatar/Unicornio.png",canvas);
+        console.log("1")        
     });
     $("#addText").on("click",function(){
         var texto=$("#nameText").val();
