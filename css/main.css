@@ -1,0 +1,196 @@
+/*
+A custom Bootstrap 3.3.x template
+from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: bootply.com
+*/
+
+html,body {
+	height:100%;
+    background:center no-repeat fixed url('/assets/example/bg_suburb.jpg');
+    background-size: cover;
+}
+
+.icon-bar {
+	background-color:#fff;
+}
+
+.navbar-trans {
+	background-color:#EC96A4;
+    color:#fff;
+}
+
+.navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
+	background-color:rgb(219, 88, 112);
+}
+
+.navbar-trans a{
+    color:#fefefe;
+}
+
+.navbar-trans .form-control:focus {
+	border-color: #eee;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
+}
+
+section {
+	padding-top:70px;  
+    padding-bottom:50px; 
+    min-height:100vh;
+}
+
+.v-center {
+    padding-top:10%;
+    font-size:70px;
+}
+  
+.well {
+	border-color:transparent;
+}
+
+
+/* Section 1 */  
+#section1 {
+    padding-top:100px;  
+	background-color: rgb(255, 255, 255);
+    color:#2988bc;
+}
+
+.img-lados{
+    width: 280px;
+    margin: 0 auto;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    box-shadow: 10px 10px 5px #ccc;
+}
+.img-center{
+    width: 250px;
+    margin: 0 auto;
+}
+.top-button-create { margin-top:25px; }
+
+.slogan{
+    font-family: 'Dosis', sans-serif;
+}
+
+.btn-doit {
+    color: #fff;
+    background-color: #2988bc;
+    border-color: #2988bc;
+}
+
+.btn-doit:hover {
+    color: #fff;
+    background-color: #237cac;
+    border-color: #237cac;
+}
+
+/* Fin Section 1*/
+
+/* Section 2*/
+#section2 {
+    background-color:rgb(219, 88, 112);
+    color:#FFF;
+    font-family: 'Dosis', sans-serif;
+}
+  
+.img-caracteristicas{
+    width: 280px;
+    margin: 0 auto;
+    -moz-box-shadow: 10px 10px 5px rgb(58, 58, 58);
+    -webkit-box-shadow: 10px 10px 5px rgb(58, 58, 58);
+    box-shadow: 10px 10px 5px rgb(58, 58, 58);
+}
+/* Fin Section 2*/
+/* Section 3*/
+#section3 {
+    padding-top:30px;
+    background-color: #fff;
+    color:#2988bc;
+    font-family: 'Dosis', sans-serif;
+}
+a.list-group-item.active,[class*='-info'] {
+    background-color: #ed8c72;
+	border-color: #ec8268;
+    color:#fff;
+}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #eb7a61;
+    border-color: #ec765f;
+}
+
+/* Fin Section 3*/
+
+#section4 {
+    padding-top:30px;
+    background-color:rgb(219, 88, 112);
+    color:#FFF;
+    font-family: 'Dosis', sans-serif;
+}
+#map{
+	text-align: center;
+}
+
+@media screen and (max-width: 399px){
+	.grande{
+		display: none;
+	}
+
+	.mediano{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 778px){
+	.grande{
+		display: none;
+	}
+
+	.pequeño{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 779px){
+	.mediano{
+		display: none;
+	}
+
+	.pequeño{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+footer {
+	background-color:#494949;
+    color:#ddd;
+    min-height:30px;
+    padding-top:20px;
+    padding-bottom:40px;
+    font-family: 'Dosis', sans-serif;
+}
+
+footer .nav>li>a {
+    padding:3px;
+    color:#ccc;
+}
+
+footer .nav>li>a:hover {
+    background-color:transparent;
+	color:#fff;
+}

@@ -159,6 +159,18 @@ function main() {
     });
 }
 
+function loadFB(){
+
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+      FB.init({
+        appId: '121698668509802',
+        version: 'v2.7' 
+      });     
+    });
+
+}
+
 
 
 

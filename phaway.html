@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>Phaway</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/phaway.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+
+<body>
+
+        <div class="page-header">
+                <h3>Phaway<small> - Crea tu cuaderno</small></h3>
+        </div>
+    
+    <div class="container">
+            
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="c" width="394" height="525" style="border:1px solid"></canvas>
+            </div>
+            <div class="col-md-6">
+                    <div class="row">
+                            <div class="col-md-12">
+                                    <h3>Tamaño</h3>
+                            </div>
+                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <select class="form-control">
+                                    <option>A4 (21cm x 29.7cm)</option>
+                                    <option>A5 (15cm x 21cm)</option>
+                                    <option>A6 (10.5cm x 15cm)</option>
+                                  </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <h3>Fondos</h3>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="carousel slide multi-item-carousel" id="theCarouse2">
+                            <div class="carousel-inner">
+                              <div class="item active">
+                                <div class="col-xs-4"><a href="#1"><img src="img/fondos/Fondo.jpg" class="img-responsive Fondo"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/fondos/FondoBailarina.jpg" class="img-responsive FondoBailarina" ></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/fondos/FondoGato.jpg" class="img-responsive FondoGato"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/fondos/FondoUnicornio.jpg" class="img-responsive FondoUnicornio" ></a></div>
+                              </div>
+                            </div>
+                            <a class="left carousel-control" href="#theCarouse2" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                            <a class="right carousel-control" href="#theCarouse2" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                        </div>
+
+                        </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                            <h3>Avatar</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="carousel slide multi-item-carousel" id="theCarousel">
+                            <div class="carousel-inner">
+                              <div class="item active">
+                                <div class="col-xs-4"><a href="#1"><img src="img/avatar/Elefante.png" class="img-responsive Elefante"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/avatar/Gato.png" class="img-responsive Gato"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/avatar/RatonaSola.png" class="img-responsive RatonaSola" ></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="col-xs-4"><a href="#1"><img src="img/avatar/Unicornio.png" class="img-responsive Unicornio" ></a></div>
+                              </div>
+                            </div>
+                            <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                            <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        Texto
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <input id="nameText" type="text" class="form-control" placeholder="Tu nombre">
+                            <span class="input-group-btn">
+                              <button id="addText" class="btn btn-primary" type="button">Añadir</button>
+                            </span>
+                          </div><!-- /input-group -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-md-2">
+                    
+                </div>
+                <div class="col-md-8" align="center">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcuadernosphaway%2F&tabs=messages&width=500&height=320&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=204080513397098" width="500" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+
+        </div>
+    </div>
+
+
+
+   
+    <script src="vendors/jquery/jquery-3.2.1.js"></script>
+    <script src="vendors/fabric/fabric.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.js"></script>
+    <script src="js/phaway.js"></script>
+    
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.10&appId=121698668509802';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+</html>
