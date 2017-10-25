@@ -20,12 +20,12 @@ html,body {
 }
 
 .navbar-trans {
-	background-color:#EC96A4;
+	background-color:#aee2fc;;
     color:#fff;
 }
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
-	background-color:rgb(219, 88, 112);
+	background-color:#8ed0f3;;
 }
 
 .navbar-trans a{
@@ -59,7 +59,8 @@ section {
 #section1 {
     padding-top:100px;  
 	background-color: rgb(255, 255, 255);
-    color:#2988bc;
+    color:rgb(70, 70, 70);
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .img-lados{
@@ -70,15 +71,33 @@ section {
     box-shadow: 10px 10px 5px #ccc;
 }
 .img-center{
-    width: 250px;
+    width: 150px;
     margin: 0 auto;
 }
 .top-button-create { margin-top:25px; }
 
 .slogan{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.doItButton{
+    color:#2988bc;
+    border-bottom: 1px solid #8ed0f3;
+    font-size: 20px;
+    text-decoration: none;
+}
+.doItButton:hover{
+    color:#1d83b9;
+    border-bottom: 1px solid rgb(216, 55, 85);
+    font-size: 20px;
+    text-decoration: none;
 }
 
+.header-slogan{
+    color:#55acd8;
+    text-align: left;
+    font-size: 18px;
+    margin-left: 70px;
+}
 .btn-doit {
     color: #fff;
     background-color: #2988bc;

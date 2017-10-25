@@ -20,9 +20,10 @@ $('body').scrollspy({
         }
       }
   });
-  $('#doitButton').on("click", function(){
+  $('.doItButton').on("click", function(){
     window.location.href = "phaway.html";
 
   })
+  $('.img-lados').animateCss('bounce');
 
 }
