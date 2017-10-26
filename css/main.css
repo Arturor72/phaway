@@ -20,12 +20,12 @@ html,body {
 }
 
 .navbar-trans {
-	background-color:#aee2fc;;
+	background-color:#59b4df;;
     color:#fff;
 }
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
-	background-color:#8ed0f3;;
+	background-color:#63c2ee;;
 }
 
 .navbar-trans a{
@@ -114,7 +114,7 @@ section {
 
 /* Section 2*/
 #section2 {
-    background-color:rgb(219, 88, 112);
+    background-color:#63c2ee;
     color:#FFF;
     font-family: 'Dosis', sans-serif;
 }
@@ -135,15 +135,15 @@ section {
     font-family: 'Dosis', sans-serif;
 }
 a.list-group-item.active,[class*='-info'] {
-    background-color: #ed8c72;
-	border-color: #ec8268;
+    background-color: rgb(233, 95, 123);
+	border-color: rgb(245, 118, 143);
     color:#fff;
 }
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
     z-index: 2;
     color: #fff;
-    background-color: #eb7a61;
-    border-color: #ec765f;
+    background-color: rgb(216, 55, 85);;
+    border-color: rgb(216, 55, 85);;
 }
 
 /* Fin Section 3*/

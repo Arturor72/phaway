@@ -1,10 +1,10 @@
 $(document).ready(main());
 var canvas = this.__canvas = new fabric.Canvas('c');
+canvas.set({backgroundColor: "#fafafa",});
 loadAnillo("img/Anillado.png",canvas);
 function loadAnillo(pathAnillo, canvas){
 
     (function() {
-        //canvas.clear();
         fabric.Object.prototype.transparentCorners = false;
         
         var mImage=new fabric.Image.fromURL(pathAnillo, function(img) {
@@ -42,6 +42,16 @@ function createBackground(nameBackground, canvas){
           });
           var objs = canvas.getObjects();
           var c=0;
+          var shadow = {
+            color: 'rgba(0,0,0,0.6)',
+            blur: 20,    
+            offsetX: 10,
+            offsetY: 10,
+            opacity: 0.6,
+            fillShadow: true, 
+            strokeShadow: true 
+        }
+          img.setShadow(shadow);
           if (objs.length) {
               objs.forEach(function(e) {
                   if (e && e.type === 'image' && containsx(e._element.src,"fondos*")) {
@@ -85,7 +95,6 @@ function addImage(pathImage, canvas){
             canvas.add(img);
             }
         }) ;
-
       })();
 }
 
@@ -151,12 +160,28 @@ function main() {
     });
     $(".Unicornio").on("click",function(){
         addImage("img/avatar/Unicornio.png",canvas);
+        
         console.log("1")        
     });
     $("#addText").on("click",function(){
         var texto=$("#nameText").val();
         createText(texto,canvas);
     });
+    $("#saveImage").on("click", function(){
+        canvas.discardActiveObject();
+        canvas.renderAll(); 
+        $("#c").get(0).toBlob(function(blob){
+            
+            saveAs(blob,"MyImage.png");
+
+
+       });
+        
+    });
+
+
+    
+
 }
 
 function loadFB(){
