@@ -108,10 +108,25 @@ function createText(texto, canvas){
     (function() {
         console.log("addText "+texto);
         var text = new fabric.IText(texto, { 
-            left: canvas.getWidth()/2, top: canvas.getHeight()-40, fontFamily: 'Indie Flower', fontSize: 40,
+            left: canvas.getWidth()/2, top: canvas.getHeight()-40, fontFamily: 'Arial', fontSize: 40,
         });
         canvas.add(text);
+        canvas.renderAll();
     })();
+}
+
+function changeFont(canvas, myFont){
+    
+    var obj=canvas.getActiveObject();
+    console.log(canvas.getActiveObject().get('type'));
+    if(canvas.getActiveObject().get('type')==="i-text"){
+        console.log("Dentro");
+        obj.set({
+            fontFamily: myFont,
+        });
+        canvas.renderAll();
+    }
+
 }
 //sendBackwards
 function main() {
@@ -177,6 +192,10 @@ function main() {
 
        });
         
+    });
+    $("#changeFont").on("click", function(){
+        var changeFontText=$("#changeFontSelect").val();
+        changeFont(canvas, changeFontText);
     });
 
 
