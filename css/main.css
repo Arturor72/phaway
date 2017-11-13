@@ -79,24 +79,43 @@ section {
 .slogan{
     font-family: 'Merriweather Sans', sans-serif;
 }
-.doItButton{
+/*.doItButton{
     color:#2988bc;
     border-bottom: 1px solid #8ed0f3;
     font-size: 20px;
     text-decoration: none;
-}
-.doItButton:hover{
-    color:#1d83b9;
-    border-bottom: 1px solid rgb(216, 55, 85);
-    font-size: 20px;
+}*/
+.doItButton{
     text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 50px;
+    background: #F2385A;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px 0px #f02046, 0px 0px 12px 0px #bbb;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.doItButton:active {
+    box-shadow: 0px 7px 0px 0px #f02046;
+    text-decoration: none;
+    color: white;
+  }
+.doItButton:hover{
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 7px 0px 0px #f02046;
 }
 
 .header-slogan{
     color:#55acd8;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
-    margin-left: 70px;
+    /*margin-left: 70px;*/
 }
 .btn-doit {
     color: #fff;
@@ -114,18 +133,24 @@ section {
 
 /* Section 2*/
 #section2 {
+    padding-top:30px;
     background-color:#63c2ee;
     color:#FFF;
     font-family: 'Dosis', sans-serif;
 }
   
 .img-caracteristicas{
-    width: 280px;
+    width: 150px;
     margin: 0 auto;
     -moz-box-shadow: 10px 10px 5px rgb(58, 58, 58);
     -webkit-box-shadow: 10px 10px 5px rgb(58, 58, 58);
     box-shadow: 10px 10px 5px rgb(58, 58, 58);
 }
+.content-text{
+    color: #fff;
+    font-size: 18px;
+}
+
 /* Fin Section 2*/
 /* Section 3*/
 #section3 {
